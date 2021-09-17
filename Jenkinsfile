@@ -28,15 +28,13 @@ pipeline {
                 echo "Running test"
                 script {
                     sh "mvn clean test"
-                    sh "mvn clean integration-test"
-                    sh " mvn clean verify"
                 }
             }
         }
         stage ('Build Image') {
             steps {
                 script {
-                    sh "cd ${WORKSPACE} && sudo docker build ."
+                    sh "cd ${WORKSPACE} && docker build -t dockerhandson/spring-boot-mongo ."
                 }
             }
         }
