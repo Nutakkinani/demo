@@ -6,10 +6,10 @@ pipeline {
     agent {
         label 'OpenJDK8'
     }
-    tools {
+    //tools {
         //maven "Maven 3.3"
         //jdk "OpenJDK 1.8"
-    }
+    //}
     // Environment variables
     //environment {
     //}
